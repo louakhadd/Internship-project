@@ -1,0 +1,179 @@
+<app-header></app-header>
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Blog</li>
+        </ol>
+        <h2>Blog</h2>
+
+      </div>
+    </section>
+    <!-- End Breadcrumbs -->
+    
+    <!-- ======= Blog Section ======= -->
+    <div *ngIf="blog">
+    <section class="blog" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <div class="container">
+  
+        <div class="row">
+  
+          <div class="col-lg-8 entries">
+  
+            <article class="entry entry-single">
+              <div class="entry-img">
+                <img src="assets/images/Blog/blog-post-1.jpg" alt="" class="img-fluid">
+              </div>
+  
+              <h2 class="entry-title">
+                <a href="blog-single.html">{{blog.title}}</a>
+              </h2>
+  
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="blog-single.html">{{blog.auteur}}</a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">{{blog.date | date: 'dd/MM/yyyy'}}</time></a></li>
+                  <li class="d-flex align-items-center"><i class="icofont-comment"></i> <a href="blog-single.html">12 Comments</a></li>
+                </ul>
+              </div>
+  
+              <div class="entry-content">
+                {{blog.contenue}}
+                <blockquote>
+                  <i class="icofont-quote-left quote-left"></i>
+                  <p>
+                    Et vero doloremque tempore voluptatem ratione vel aut. Deleniti sunt animi aut. Aut eos aliquam
+                    doloribus minus autem quos.
+                  </p>
+                  <i class="las la-quote-right quote-right"></i>
+                  <i class="icofont-quote-right quote-right"></i>
+                </blockquote>
+              </div>
+  
+              <div class="entry-footer clearfix">
+               
+  
+              </div>
+  
+            </article><!-- End blog entry -->
+  
+            <div class="blog-author clearfix">
+              <img src="assets/images/Blog/blog-author.jpg" class="rounded-circle float-left" alt="">
+              <h4>Jane Smith</h4>
+              <div class="social-links">
+                <a href="https://twitters.com/#"><i class="icofont-twitter"></i></a>
+                <a href="https://facebook.com/#"><i class="icofont-facebook"></i></a>
+                <a href="https://instagram.com/#"><i class="icofont-instagram"></i></a>
+              </div>
+              <p>
+                Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat
+                voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
+              </p>
+            </div>
+            <!-- End blog author bio -->
+  
+  
+            <div class="blog-comments">
+  
+              <h4 class="comments-count">8 Comments</h4>
+  
+              
+              <div id="comment-1" class="comment clearfix" *ngFor="let comment of comments">
+                <img src="assets/images/Blog/comments-1.jpg" class="comment-img  float-left" alt="">
+                <h5><a href="">{{comment.name}}</a> <a pageScroll  href="#comm" class="reply"><i class="icofont-reply"></i> Reply</a></h5>
+                <time datetime="2020-01-01">{{comment.date | date: 'dd/MM/yyyy'}}</time>
+                <p>
+                  {{comment.contenue}}
+                </p>
+  
+                <!-- <div id="comment-reply-2" class="comment comment-reply clearfix">
+                <img src="assets/images/Blog/comments-4.jpg" class="comment-img  float-left" alt="">
+                <h5><a href="">Sianna Ramsay</a> <a href="#" class="reply"><i class="icofont-reply"></i> Reply</a></h5>
+                <time datetime="2020-01-01">01 Jan, 2020</time>
+                <p>
+                  Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
+                </p>
+  
+              </div> -->
+                
+              </div>
+            
+  
+              
+  
+       <section id="comm" >   
+              <div class="reply-form">
+                <h4>Leave a Reply</h4>
+                <p>Your email address will not be published. Required fields are marked * </p>
+                <form [formGroup]="commentForm">
+                  <div class="row">
+                    <div class="col-md-6 form-group" >
+                      <mat-form-field style="width: 250px;">
+                      <input matInput type="text" formControlName="name" placeholder="Your Name*">
+                      </mat-form-field>
+                    </div>
+  
+                   <div class="col-md-6 form-group" >
+                      <mat-form-field>
+                      <input matInput type="text" formControlName="email" placeholder="Your Email*">
+                      </mat-form-field>
+                    </div>  
+  
+                  </div>
+  
+                  <div class="row">
+                    <div class="col form-group">
+                      <mat-form-field style="width: 550px;">
+                      <textarea matInput formControlName="contenue" placeholder="Your Comment*"></textarea>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  
+                   
+                  <button type="submit" class="btn btn-primary" (click)="ajouterComment()">Post Comment</button>
+                </form>
+              </div>
+    </section>
+  
+            </div><!-- End blog comments -->
+  
+          </div><!-- End blog entries list -->
+  
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form action="">
+                  <input type="text">
+                  <button type="submit"><i class="icofont-search"></i></button>
+                </form>
+
+              </div><!-- End sidebar search formn-->
+<br>
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-item recent-posts">
+                
+                <div class="post-item clearfix" *ngFor="let article of articles" >
+                  <img src="assets/images/Blog/blog-recent-1.jpg" alt="">
+                  <h4><a routerLink="/article" (click)="articleDetails(article)" > {{article.title}}</a></h4>
+                  <time datetime="2020-01-01">{{article.date | date: 'dd/MM/yyyy'}}</time>
+                </div>           
+
+              </div><!-- End sidebar recent posts-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+  
+        </div><!-- End row -->
+  
+      </div><!-- End container -->
+  
+    </section><!-- End Blog Section -->
+    </div>
+
+    <app-footer></app-footer>
