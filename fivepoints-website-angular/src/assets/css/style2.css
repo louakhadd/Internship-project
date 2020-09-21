@@ -1,10 +1,3 @@
-/**
-* Template Name: Hidayah - v2.2.0
-* Template URL: https://bootstrapmade.com/hidayah-free-simple-html-template-for-corporate/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -25,53 +18,6 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-/* #preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #428bca;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} */
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -1320,15 +1266,10 @@ section {
 
 .blog .entry .entry-content .read-more a {
   display: inline-block;
-  /*background: #94c045;*/
   color: #fff;
   padding: 6px 20px;
   transition: 0.3s;
   font-size: 14px;
-}
-
-.blog .entry .entry-content .read-more a:hover {
- /* background: #a6ca63;*/
 }
 
 .blog .entry .entry-content h3 {
@@ -1581,10 +1522,6 @@ section {
   background-color: #3c4133;
 }
 
-.blog .blog-comments .reply-form .btn-primary:hover {
-  background-color: #94c045;
-}
-
 .blog .blog-pagination {
   color: #717a60;
 }
@@ -1609,11 +1546,6 @@ section {
   color: #aaaaaa;
   padding: 7px 16px;
   display: inline-block;
-}
-
-.blog .blog-pagination li.active, .blog .blog-pagination li:hover {
-  background: #94c045;
-  border: 1px solid #94c045;
 }
 
 .blog .blog-pagination li.active a, .blog .blog-pagination li:hover a {
@@ -1695,10 +1627,6 @@ section {
   color: #7e886b;
 }
 
-.blog .sidebar .categories ul a:hover {
-  color: #94c045;
-}
-
 .blog .sidebar .categories ul a span {
   padding-left: 5px;
   color: #a3ab95;
@@ -1723,10 +1651,6 @@ section {
 .blog .sidebar .recent-posts h4 a {
   color: #070806;
   transition: 0.3s;
-}
-
-.blog .sidebar .recent-posts h4 a:hover {
-  color: #94c045;
 }
 
 .blog .sidebar .recent-posts time {
@@ -1758,18 +1682,6 @@ section {
   border: 1px solid #edefea;
   display: inline-block;
   transition: 0.3s;
-}
-
-.blog .sidebar .tags ul a:hover {
-  color: #fff;
-  border: 1px solid #94c045;
-  background: #94c045;
-}
-
-.blog .sidebar .tags ul a span {
-  padding-left: 5px;
-  color: #d5d8ce;
-  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -1811,101 +1723,6 @@ section {
 #google-map {
   height: 370px;
   margin-bottom: 20px;
-}
-
-.php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.php-email-form input, .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.php-email-form input::focus, .php-email-form textarea::focus {
-  background-color: #3ec1d5;
-}
-
-.php-email-form input {
-  padding: 20px 15px;
-}
-
-.php-email-form textarea {
-  padding: 12px 15px;
-}
-
-.php-email-form button[type="submit"] {
-  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border: 1px solid #ccc;
-  color: #444;
-  font-size: 16px;
-  font-weight: 700;
-  margin-top: 8px;
-  padding: 12px 30px;
-  text-transform: uppercase;
-  transition: all 0.3s ease 0s;
-  border-radius: 30px;
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 /*--------------------------------------------------------------
@@ -2080,4 +1897,65 @@ section {
   color: #fff;
 }
 
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.btn {
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 10px 30px; }
+  .btn:hover, .btn:active, .btn:focus {
+    outline: none;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
+  .btn.btn-primary {
+    background: #68A4C4;
+    border-color: #68A4C4; /*007bff*/
+    color: #fff; }
+    .btn.btn-primary:hover {
+      background: #000;
+      border-color: #000;
+      color: #fff; }
+    .btn.btn-primary.btn-black--hover:hover {
+      background: #666666;
+      color: #fff; }
+
+.section-sub-title {
+  font-size: 13px;
+  color: #68A4C4;
+  letter-spacing: .2em;
+  text-transform: uppercase; }
+
+.custom-direction {
+  position: relative;
+  z-index: 99;
+  border-radius: 7px;
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: inline-block;
+  background: #68A4C4/**/; }
+  @media (max-width: 991.98px) {
+    .custom-direction {
+      bottom: -25px;
+      top: auto !important;
+      right: 50% !important;
+      -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+      transform: translateX(50%); } }
+  .custom-direction a {
+    padding: 10px 20px;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5rem; }
+    .custom-direction a.custom-next > span > span {
+      position: relative;
+      display: inline-block;
+      -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      transform: rotate(-180deg); }
 
