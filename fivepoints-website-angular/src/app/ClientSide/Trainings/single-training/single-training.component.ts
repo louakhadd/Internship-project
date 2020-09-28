@@ -15,7 +15,7 @@ export class SingleTrainingComponent implements OnInit {
   constructor(private route: ActivatedRoute,private router: Router,
     private trainingService: TrainingService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.training = new Training();
 
     this.id = this.route.snapshot.params['id'];

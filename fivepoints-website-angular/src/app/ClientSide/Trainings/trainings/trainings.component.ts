@@ -49,4 +49,5 @@ export class TrainingsComponent implements OnInit , OnDestroy {
   }
 
 
+
 }

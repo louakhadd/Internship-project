@@ -32,6 +32,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 import { ServicesComponent } from './ClientSide/Consulting/services/services.component';
 import { ServiceRegistrationComponent } from './ClientSide/Consulting/service-registration/service-registration.component';
 import { ContactComponent } from './ClientSide/Home/contact/contact.component';
@@ -76,6 +78,7 @@ import { ProfilComponent } from './Dashboard/profil/profil.component';
     MatSelectModule,
     MatIconModule,
     MatTableModule,
+    MatSlideToggleModule,
     Ng2PageScrollModule
 
   ],
