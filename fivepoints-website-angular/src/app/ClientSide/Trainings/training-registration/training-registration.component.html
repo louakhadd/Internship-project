@@ -83,6 +83,7 @@
             <br />
             <button
               type="submit"
+              [disabled]="!registrationForm.valid"
               class="btn btn-primary"
               (click)="register()"
               style="margin-left: 210px"

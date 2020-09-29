@@ -41,12 +41,7 @@
                 <span class="nav-link-text">Tables</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="upgrade.html">
-                <i class="ni ni-send text-dark"></i>
-                <span class="nav-link-text">Upgrade</span>
-              </a>
-            </li>
+
           </ul>
           <!-- Divider -->
           <hr class="my-3">
@@ -329,6 +324,34 @@
                     </div>
 
                     <div class="row">
+
+                      
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label">Level</label><br>
+                            <mat-form-field appearance="fill">
+                              <select matNativeControl style="display: inline-block">
+                                <option *ngFor="let key of levelOptions" [value]="key" [label]="level[key]"></option>
+                              </select>
+                            </mat-form-field>                         
+                        </div>
+                      </div>
+                      
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="form-control-label">Tutor</label><br>
+                          <mat-form-field appearance="fill">
+                          <mat-label>Select</mat-label>
+                          <mat-select>
+                            <mat-option *ngFor="let user of users" [value]="user.value">
+                              {{user.prenom}} {{user.nom}}
+                            </mat-option>
+                          </mat-select>
+                          </mat-form-field>
+
+                        </div>
+                      </div>
+
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="form-control-label">Description</label>
@@ -338,16 +361,6 @@
                     </div>
 
                     <div class="row">
-                      <div class="col-lg-6">
-                        <div class="form-group">
-                          <label class="form-control-label">Tutor</label><br>
-                          <mat-form-field appearance="fill">
-                          <mat-label>Select</mat-label>
-                         
-                          </mat-form-field>
-
-                        </div>
-                      </div>
                       <div class="col-lg-6">
                         <div class="form-group">
                           <label class="form-control-label">Price</label>

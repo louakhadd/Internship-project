@@ -26,7 +26,7 @@ export class ServiceRegistrationComponent implements OnInit {
     numTel: new FormControl('', [Validators.required]),
     cv: new FormControl('', [Validators.required]),
     sujet: new FormControl('', [Validators.required]),
-    service: new FormControl('', [Validators.required]),
+   // service: new FormControl('', [Validators.required]),
   });
 
   register() {

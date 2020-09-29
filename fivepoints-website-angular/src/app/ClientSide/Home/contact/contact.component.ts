@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ContactService } from "../../../services/contact.service";
 import { Router } from '@angular/router';
@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  @ViewChild('fform') feedbackFormDirective;
 
   constructor(private contactService: ContactService, private router: Router) { }
 
@@ -25,11 +26,8 @@ export class ContactComponent implements OnInit {
   ajouterMessage(){
     this.contactService.sendMessage(this.contactForm.value).subscribe();
      console.log(this.contactForm.value);
-     this.reload();
+    this.feedbackFormDirective.resetForm();
    }
 
-   reload() {
-    this.router.navigate(['/contact']);
-  }
 
 }

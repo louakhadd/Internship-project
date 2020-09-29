@@ -1,4 +1,5 @@
 import { trainingCategory } from './trainingCategory';
+import { Level } from './level';
 import { User } from './User';
 
 export class Training {
@@ -13,4 +14,5 @@ export class Training {
     nblike: number;
     user: User;
     category: trainingCategory;
+    level: Level
 }

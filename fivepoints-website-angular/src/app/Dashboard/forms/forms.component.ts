@@ -5,6 +5,7 @@ import { UserService } from "../../services/user.service";
 import { BlogService } from "../../services/blog.service";
 import { User } from "../../entities/user";
 import { trainingCategory } from "../../entities/trainingCategory";
+import { Level } from "../../entities/level";
 import { DatePipe } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -17,6 +18,8 @@ export class FormsComponent implements OnInit {
   users: User[];
   category= trainingCategory;
   categoryOptions= [];
+  level= Level;
+  levelOptions= [];
 
   pipe = new DatePipe('en-US'); 
   now = Date.now();
@@ -53,7 +56,7 @@ export class FormsComponent implements OnInit {
     });
 
     this.categoryOptions = Object.keys(this.category);
-    
+    this.levelOptions = Object.keys(this.level);
   }
 
   ajouterFormation(){

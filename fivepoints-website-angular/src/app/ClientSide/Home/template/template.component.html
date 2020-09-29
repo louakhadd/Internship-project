@@ -497,11 +497,11 @@
             <!-- Start  contact -->
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="form contact-form">
-                  <form [formGroup]="contactForm">
+                  <form [formGroup]="contactForm" #fform="ngForm">
                     <div >
                       <mat-form-field style="width: 500px;">
                          <input matInput type="text" formControlName="name" placeholder="Your Name" />
-                         <!--<div class="validate"></div>-->
+                         <mat-error *ngIf="contactForm.get('name').hasError('required')">name is required</mat-error>
                       </mat-form-field>
                     </div>
 
@@ -509,19 +509,20 @@
                     <div >
                      <mat-form-field style="width: 500px;">
                         <input matInput type="text" formControlName="subject" placeholder="Subject" />
-                        <!--<div class="validate"></div>-->
+                        <mat-error *ngIf="contactForm.get('subject').hasError('required')">Subject is required</mat-error>
                       </mat-form-field>
                     </div>
 
                     <div >
                       <mat-form-field style="width: 500px;">
                          <input matInput type="email" formControlName="email" placeholder="Your Email"  />
-                         <!--<div class="validate"></div>-->
+                         <mat-error *ngIf="contactForm.get('email').hasError('required')">Email is required</mat-error>
                       </mat-form-field>
                     </div>  
                     <div>
                       <mat-form-field style="width: 500px;">
                         <textarea matInput formControlName="contenuMessage"  rows="5" placeholder="Message" ></textarea>
+                        <mat-error *ngIf="contactForm.get('contenuMessage').hasError('required')">Content is required</mat-error>
                       </mat-form-field>
                     </div>
 

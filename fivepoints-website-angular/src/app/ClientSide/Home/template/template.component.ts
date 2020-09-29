@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import {Router} from '@angular/router';
 import { Blog } from "../../../entities/blog";
 import { BlogService } from "../../../services/blog.service";
@@ -13,6 +13,7 @@ import { ContactService } from "../../../services/contact.service";
   styleUrls: ['./template.component.css']
 })
 export class TemplateComponent implements OnInit {
+  @ViewChild('fform') feedbackFormDirective;
   blogs: any;
   loading:boolean;
   test :[];
@@ -59,11 +60,7 @@ export class TemplateComponent implements OnInit {
   ajouterMessage(){
     this.contactService.sendMessage(this.contactForm.value).subscribe();
      console.log(this.contactForm.value);
-     this.reload();
+    this.feedbackFormDirective.resetForm();
    }
-
-   reload() {
-    this.router.navigate(['']);
-  }
 
 }
