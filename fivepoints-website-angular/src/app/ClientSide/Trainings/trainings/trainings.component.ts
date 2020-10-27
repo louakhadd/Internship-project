@@ -39,7 +39,7 @@ export class TrainingsComponent implements OnInit , OnDestroy {
   }
 
  trainingDetails(id: number){
-    this.router.navigate(['singleTraining', id]);
+    this.router.navigate(['trainings/singleTraining', id]);
   }
 
   onClickMe(id:number){

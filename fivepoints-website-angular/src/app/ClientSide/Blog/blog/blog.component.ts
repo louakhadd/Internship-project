@@ -19,9 +19,7 @@ export class BlogComponent implements OnInit {
   constructor(private blogService: BlogService,
     private router: Router) { }
 
-    ngOnInit() {
-
-     
+    ngOnInit() {    
 
       // this.blogService.getBlogsList().subscribe((response:any)=>{
       //   console.log(response)
@@ -52,7 +50,7 @@ export class BlogComponent implements OnInit {
     }
   
     articleDetails(id: number){
-      this.router.navigate(['article', id]);
+      this.router.navigate(['blog/article', id]);
     }
 
 

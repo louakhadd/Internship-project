@@ -63,4 +63,8 @@ export class TemplateComponent implements OnInit {
     this.feedbackFormDirective.resetForm();
    }
 
+   articleDetails(id: number){
+    this.router.navigate(['blog/article', id]);
+  }
+   
 }

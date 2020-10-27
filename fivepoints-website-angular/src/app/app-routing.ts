@@ -21,12 +21,12 @@ import { ProfilComponent } from './Dashboard/profil/profil.component';
 
 
 export const AppRoutes: Routes = [
-  { path:'', component: TemplateComponent},
+  { path:'home', component: TemplateComponent},
   { path:'trainings', component: TrainingsComponent},
-  { path:'singleTraining', component: SingleTrainingComponent},
+  { path:'trainings/singleTraining', component: SingleTrainingComponent},
   { path:'trainingRegistration', component: TrainingRegistrationComponent},
   { path:'blog', component: BlogComponent},
-  { path:'article', component: ArticleComponent},
+  { path:'blog/article', component: ArticleComponent},
   
   { path:'services', component: ServicesComponent},
   { path:'serviceRegistrationComponent', component: ServiceRegistrationComponent},
@@ -38,6 +38,8 @@ export const AppRoutes: Routes = [
   { path:'register', component: RegisterComponent},
   { path:'forms', component: FormsComponent},
   { path:'profil', component: ProfilComponent}, 
+
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 
 ];
 

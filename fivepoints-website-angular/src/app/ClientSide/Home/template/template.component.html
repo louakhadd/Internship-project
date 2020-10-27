@@ -391,7 +391,7 @@
           </div>
 
           <h2 class="entry-title">
-            <a routerLink="/singleBlog">{{blog?.title}}</a>
+            <a routerLink="/blog/article" (click)="articleDetails(blog)">{{blog?.title}}</a>
           </h2>
 
           <div class="entry-meta">
@@ -406,7 +406,7 @@
             {{blog?.subtitle}}
             </p>
             <div class="read-more">
-              <a href="blog-single.html" style="background-color:#428bca;" class="btn btn-primary mr-2 mb-2">Read More</a>
+              <a routerLink="/blog/article" (click)="articleDetails(blog)" class="btn btn-primary mr-2 mb-2">Read More</a>
             </div>
           </div>
 
